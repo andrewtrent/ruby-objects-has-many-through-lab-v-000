@@ -18,7 +18,7 @@ class Doctor
   end
 
   def patients
-    Appointments.all.select {|appt| appt if appt.doctor == self}
+    Appointment.all.select {|appt| appt if appt.doctor == self}
   end
 
 end
