@@ -21,4 +21,6 @@ class Doctor
     Appointment.all.map {|appt| appt.patient if appt.doctor == self}
   end
 
+
+
 end
