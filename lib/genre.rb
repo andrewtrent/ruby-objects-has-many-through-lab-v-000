@@ -37,11 +37,11 @@ class Genre
   end
 
   def songs
-    Song.all.map {|song| song.genre if song.genre == self}
+    Song.all.select {|song| song.genre if song.genre == self}
   end
 
   def artists
-    (Song.all.map {|song| song.artist if song.genre == self}).uniq
+    (Song.all.select {|song| song.artist if song.genre == self}).uniq
   end
 
 end
