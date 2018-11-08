@@ -11,4 +11,8 @@ class Appointment
     self.doctor.appointments << self
   end
 
+  def self.all
+    @@all
+  end
+
 end
