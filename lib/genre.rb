@@ -20,12 +20,12 @@ class Genre
     end
   end
 
-  def self.find_genre(genre_name)
+  def find_genre(genre_name)
     Genre.all.detect {|genre| genre.name == genre_name}
   end
 
-  def self.exists?(genre_name)
-    if self.find_genre(genre_name).nil?
+  def exists?(genre_name)
+    if find_genre(genre_name).nil?
       false
     else
       true
