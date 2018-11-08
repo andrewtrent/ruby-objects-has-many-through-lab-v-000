@@ -16,4 +16,7 @@ class Patient
   def self.all
     @@all
   end
+
+  def doctors
+    self.appointments.map {|appt| appt.doctor if appt.patient == self}
 end
