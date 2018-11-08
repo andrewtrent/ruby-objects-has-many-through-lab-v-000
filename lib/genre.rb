@@ -8,11 +8,15 @@ class Genre
     @@all << self
   end
 
-  def self.create(genre_name)
-    if self.exists?(genre_name)
-      self.find_genre
+  def self.create(genre)
+    if genre.class == Genre
+      genre
     else
-      Genre.new(genre_name)
+      if genre.exists?(artist)
+        find_genre(genre)
+      else
+        self.new(genre)
+      end
     end
   end
 
