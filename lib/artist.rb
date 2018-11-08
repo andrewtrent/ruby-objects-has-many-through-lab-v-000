@@ -14,7 +14,7 @@ class Artist
   end
 
   def songs
-    @songs
+    Song.all.map {|song| song.artist == self}
   end
 
   def self.create(artist)
