@@ -2,6 +2,7 @@ class Artist
   attr_accessor :name, :songs
 
   @@all = []
+  @songs = []
 
   def self.all
     @@all
@@ -14,7 +15,8 @@ class Artist
   end
 
   def songs
-    Song.all.map {|song| song.artist == self}
+    #Song.all.map {|song| song.artist == self}
+    @songs
   end
 
   def self.create(artist)
